@@ -29,7 +29,7 @@ public class ImageCombineController {
             @RequestParam("productImage") MultipartFile productImage,
             @RequestParam("frameImage") MultipartFile frameImage,
             @RequestParam(name = "outputType", defaultValue = "png") String outputType,
-            @RequestParam(name = "frameColor", defaultValue = "#87CEEB") String frameColorHex,
+            @RequestParam(name = "frameColor", defaultValue = "#FFFFFF") String frameColorHex,
             @RequestParam(name = "filename", required = false) String filename
     ) throws Exception {
 
@@ -47,7 +47,7 @@ public class ImageCombineController {
             @RequestParam("productImage") MultipartFile productImage,
             @RequestParam("frameImage") MultipartFile frameImage,
             @RequestParam(name = "outputType", defaultValue = "png") String outputType,
-            @RequestParam(name = "frameColor", defaultValue = "#87CEEB") String frameColorHex,
+            @RequestParam(name = "frameColor", defaultValue = "#FFFFFF") String frameColorHex,
             Model model
     ) throws Exception {
         byte[] product = productImage.getBytes();
