@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>결합 이미지 미리보기</title>
+</head>
+<body>
+<h2>업로드된 이미지</h2>
+<div style="display: flex; gap: 20px;">
+    <div>
+        <p>제품 이미지</p>
+        <img th:src="'data:image/png;base64,' + ${productImage}" width="320" height="320" alt="Product Image"/>
+    </div>
+    <div style="background-color: darkgray">
+        <p>프레임 이미지</p>
+        <img th:src="'data:image/png;base64,' + ${frameImage}" width="320" height="320" alt="Frame Image"/>
+    </div>
+</div>
+
+<hr>
+
+<h2>결합된 이미지</h2>
+<div>
+    <img th:src="'data:' + ${dataPrefix} + ';base64,' + ${resultImage}" alt="Combined Image"/>
+</div>
+</body>
+</html>

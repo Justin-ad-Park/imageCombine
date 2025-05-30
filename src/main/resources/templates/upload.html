@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이미지 결합</title>
+</head>
+<body>
+<h1>두 이미지 결합하기</h1>
+<form method="post" action="/combine" enctype="multipart/form-data" target="_blank">
+    <label>제품 이미지: <input type="file" name="productImage" required></label><br><br>
+    <label>프레임 이미지(PNG): <input type="file" name="frameImage" required></label><br><br>
+    <label>프레임 색상:
+        <select name="frameColor">
+            <option value="#FFFFFF">원본</option>
+            <option value="#87CEEB">Sky Blue</option>
+            <option value="#E6E6FA">Lavender</option>
+            <option value="#90EE90">Light Green</option>
+            <option value="#FFE4E1">Misty Rose</option>
+            <option value="#FFFFE0">Light Yellow</option>
+        </select>
+    </label><br><br>
+    <label>출력 형식:
+        <select name="outputType">
+            <option value="png">PNG</option>
+            <option value="jpg">JPG (압축)</option>
+        </select>
+    </label><br><br>
+    <label>파일 이름 (선택): <input type="text" name="filename" placeholder="예: my_combined_image"></label><br><br>
+    <button type="submit">이미지 다운로드</button>
+</form>
+
+<br>
+----------------------------------
+<br>
+
+<form method="post" action="/combine-view" enctype="multipart/form-data">
+    <label>제품 이미지: <input type="file" name="productImage" required></label><br><br>
+    <label>프레임 이미지(PNG): <input type="file" name="frameImage" required></label><br><br>
+    <label>프레임 색상:
+        <select name="frameColor">
+            <option value="#FFFFFF">원본</option>
+            <option value="#87CEEB">Sky Blue</option>
+            <option value="#E6E6FA">Lavender</option>
+            <option value="#90EE90">Light Green</option>
+            <option value="#FFE4E1">Misty Rose</option>
+            <option value="#FFFFE0">Light Yellow</option>
+        </select>
+    </label><br><br>
+    <label>출력 형식:
+        <select name="outputType">
+            <option value="png">PNG</option>
+            <option value="jpg">JPG (압축)</option>
+        </select>
+    </label><br><br>
+    <button type="submit">이미지 미리보기</button>
+</form>
+</body>
+</html>
