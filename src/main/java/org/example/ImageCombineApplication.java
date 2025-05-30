@@ -1,4 +1,4 @@
-package org.example.imagecombine;
+package org.example;
 
 
 import org.springframework.boot.SpringApplication;
